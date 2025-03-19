@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&display=swap');
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.player {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.yeezy-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.controls button {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    color: #f3c623;
+}
+
+#seek-bar, #volume-bar {
+    width: 100%;
+    margin-top: 10px;
+}
