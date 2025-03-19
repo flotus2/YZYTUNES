@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
+
+body {
+    background: black;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fondo animado con partículas */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/particles.gif');
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #f3c623;
+    box-shadow: 0 0 20px #f3c623;
+    position: relative;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Efecto de luz intermitente */
+@keyframes flicker {
+    0% { box-shadow: 0 0 10px #f3c623; }
+    100% { box-shadow: 0 0 40px #f3c623; }
+}
+
+.logo {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: linear-gradient(to right, #ff6b6b, #f3c623, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+}
+
+.yeezy-logo {
+    width: 120px;
+    filter: drop-shadow(0 0 10px white);
+    animation: glitch 1s infinite;
+}
+
+/* Efecto glitch */
+@keyframes glitch {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Controles del reproductor */
+.controls button {
+    font-size: 24px;
+    padding: 15px;
+    margin: 10px;
+    background: linear-gradient(45deg, #ff6b6b, #f3c623);
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 0 10px white;
+}
+
+.controls button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px white;
+}
+
+/* Sliders con efecto de neón */
+#seek-bar, #volume-bar {
+    width: 100%;
+    margin-top: 15px;
+    appearance: none;
+    height: 10px;
+    background: #ff6b6b;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 10px #ff6b6b;
+    transition: 0.3s;
+}
+
+#seek-bar:hover, #volume-bar:hover {
+    box-shadow: 0 0 20px #f3c623;
+}
+
+/* Nombre de la canción con efecto digital */
+#song-title {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff6b6b;
+}
