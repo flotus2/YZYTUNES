@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEEZY MP3 PLAYER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">YEEZY PLAYER</h1>
+        <div class="player">
+            <img src="images/kanye-logo.png" alt="Yeezy Logo" class="yeezy-logo">
+            <audio id="audio-player">
+                <source src="music/song1.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+            </audio>
+            <div class="controls">
+                <button id="prev">⏮</button>
+                <button id="play-pause">▶️</button>
+                <button id="next">⏭</button>
+            </div>
+            <input type="range" id="seek-bar" value="0">
+            <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="0.5">
+            <div id="song-title">Canción: Flashing Lights</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
